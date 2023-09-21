@@ -31,10 +31,13 @@ class MovieAdapter(): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         }
         fun bind(movie: MovieModel) {
             binding.tvMovieTitle.text = movie.title
+            val releaseDate = "(${movie.release_date.substring(0,4)})"
+            binding.tvReleaseDate.text = releaseDate
+            binding.tvVoteAverage.text = movie.vote_average.toString()
+            binding.tvVoteCount.text = movie.vote_count.toString()
 
             Glide.with(binding.root.context)
                 .load(Constants.MOVIE_PATH.plus(movie.poster_path))
-                .centerCrop()
                 .into(binding.ivPosterImage)
         }
     }

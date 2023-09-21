@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MovieDatabase</string>
     <string name="iv_poster_image_description">It holds the movie image</string>
+    <string name="vote_average">Vote average:</string>
+    <string name="vote_count">Vote count:</string>
+    <string name="genre">Genre</string>
 </resources>

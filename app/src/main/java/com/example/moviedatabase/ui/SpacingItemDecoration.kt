@@ -13,21 +13,32 @@ class SpacingItemDecoration(private val padding: Int): ItemDecoration() {
         state: RecyclerView.State
     ) {
         super.getItemOffsets(outRect, view, parent, state)
-        val position = parent.getChildAdapterPosition(view)
-        val column = position % 2
-        if (position == 0 || position == 1) {
-            outRect.top = padding
-        } else {
-            outRect.top = padding / 2
-        }
-        if (column == 0) {
-            outRect.left = padding
-            outRect.right = padding / 2
-            outRect.bottom = padding / 2
-        } else {
-            outRect.left = padding / 2
-            outRect.right = padding
-            outRect.bottom = padding / 2
-        }
+
+        outRect.left = padding
+        outRect.right = padding
+        outRect.bottom = padding / 2
+        outRect.top = padding / 2
+
+
+
+
+        //these were for gridlayout
+        //val position = parent.getChildAdapterPosition(view)
+        //val column = position % 2
+        //if (position == 0 || position == 1) {
+        //    outRect.top = padding
+        //} else {
+        //    outRect.top = padding / 2
+        //}
+        //if (column == 0) {
+        //    outRect.left = padding
+        //    outRect.right = padding / 2
+        //    outRect.bottom = padding / 2
+        //} else {
+        //    outRect.left = padding / 2
+        //    outRect.right = padding
+        //    outRect.bottom = padding / 2
+
+
     }
 }

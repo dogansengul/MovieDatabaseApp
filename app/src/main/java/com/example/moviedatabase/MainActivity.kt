@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviedatabase.api.MovieModel
 import com.example.moviedatabase.databinding.ActivityMainBinding
 import com.example.moviedatabase.model.MainViewModel
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, "Clicked $position", Toast.LENGTH_SHORT).show()
             }
         })
-        layoutManager = GridLayoutManager(this@MainActivity, 2)
+        layoutManager = GridLayoutManager(this@MainActivity, 1)
         addItemDecoration(SpacingItemDecoration(25))
     }
 }

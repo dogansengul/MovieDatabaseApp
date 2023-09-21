@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MovieDatabase</string>
+    <string name="iv_poster_image_description">It holds the movie image</string>
+</resources>
